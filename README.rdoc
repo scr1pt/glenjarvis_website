@@ -1,0 +1,21 @@
+== GlenJarvis.com Website
+
+I believe in transparency. I am migrating this web site from Python/Django to
+Ruby/Rails -- mostly because I need a sample project for practice. I am just
+learning Rails, however. So, there is room for error.
+
+The source code for this site is completely online. I invite your feedback as
+the more I hear the more that I can learn.
+
+link:http://glenjarvis.com
+
+
+== Security Reward
+
+1. I have a $50 USD reward for the first person who can find a legitimate security
+   vulnerability and can document it clearly. I am starting with a lower reward
+   because at this stage it is easy to make a mistake (like including 
+   config/initializers/secret_token.rb in the repo in error).
+
+2. Bonus points for changing the following phrase on the websever (not just in github):
+       I am currently secure and have not been penetrated.
