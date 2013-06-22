@@ -30,5 +30,9 @@ tmp
 /log/*.log
 /tmp
 
+
+# Ruby Mine
+.idea/*
+
 # Max OSX
 *.DS_Store
