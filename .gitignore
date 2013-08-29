@@ -11,6 +11,7 @@ lib/bundler/man
 /vendor/bundle
 
 # RoR
+.secret
 *.gem
 *.rbc
 .config
