@@ -25,7 +25,7 @@
           <ul class="nav">
             <li><a href="#about">About</a></li>
           </ul>
-          <form action="#"
+          <form action="/static_pages/search_results"
                 class="navbar-form pull-right"
                 id="search_form">
             <input name='q' class="span3" type="search" placeholder="Search..." />
@@ -53,6 +53,7 @@
   <div class="container">
             <%= yield %>
   </div>
+  <div class="container">
     <hr>
 
     <footer>
@@ -64,6 +65,7 @@
 
       <p>&copy; 2010-2013 Glen Jarvis, LLC. All Rights Reserved.</p>
     </footer>
+  </div>
 
   <script>
   $(function() {
