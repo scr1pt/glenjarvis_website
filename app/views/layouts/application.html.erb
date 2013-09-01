@@ -23,9 +23,9 @@
         <a class="brand" href="/">Glen Jarvis, LLC</a>
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li class="active"><a href="#about">About</a></li>
+            <li class="active"><%= link_to("About", about_path) %></li>
           </ul>
-          <form action="/static_pages/search_results"
+          <form action="<%= search_results_path %>"
                 class="navbar-form pull-right"
                 id="search_form">
             <input name='q' class="span3" type="search" placeholder="Search..." />
