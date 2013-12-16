@@ -22,6 +22,9 @@ pkg
 rdoc
 test/version_tmp
 
+# Asset Pipeline
+public/assets
+
 # RoR Extensions
 spec/reports
 *.sassc
