@@ -1,0 +1,25 @@
+<%# Links for current user. %>
+<div class="navbar-text pull-right">
+  <div class="nav-collapse collapse">
+    <form action="<%= search_results_path %>"
+          class="navbar-form pull-right"
+          id="search_form">
+      <input name='q' class="span3" type="search" placeholder="Search..." />
+             <!-- onchange="document.getElementById('search_form').submit();" -->
+      <div>
+        <input type="hidden"
+               name="cx"
+               value="partner-pub-2648941248992936:vvaqvh-2jy7" />
+        <input type="hidden"
+               name="cof"
+               value="FORID:10" />
+        <input type="hidden"
+               name="ie"
+               value="UTF-8" />
+      </div><!-- end search div -->
+    </form>
+    <script type="text/javascript"
+            src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en">
+    </script>
+  </div><!--/.nav-collapse -->
+</div>
