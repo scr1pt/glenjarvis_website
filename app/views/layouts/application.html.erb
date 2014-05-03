@@ -1,31 +1,108 @@
-<% content_for :navbar, render("layouts/user_nav") %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "GlenJarvis.com" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "App_Name" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
 
-<%= render :layout => "layouts/base" do %>
-  <div class="page-header">
-    <div class="row">
-      <div class="span7">
-        <h2><%= @title %></h2>
-        <%= yield :description %>
-      </div>
-      <div class="span2">
-        <%= yield :actions %>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/">Glen Jarvis, LLC</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/recommendations">Recommendations</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <form action="http://glenjarvis.com/search_results.html"
+                  class="navbar-form pull-right"
+                  id="search_form">
+              <input name='q' class="span3" type="search" placeholder="Search..." />
+                     <!-- onchange="document.getElementById('search_form').submit();" -->
+              <div>
+                <input type="hidden"
+                       name="cx"
+                       value="partner-pub-2648941248992936:vvaqvh-2jy7" />
+                <input type="hidden"
+                       name="cof"
+                       value="FORID:10" />
+                <input type="hidden"
+                       name="ie"
+                       value="UTF-8" />
+              </div><!-- end search div -->
+            </form>
+            <script type="text/javascript"
+                    src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en">
+            </script>
+          </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
-  </div><!-- /.page-header -->
 
-  <div class="row">
-    <div id="content" class="span10">
-      <%= yield %>            
-    </div> <!-- /#content -->
+    <div class="container">
+              <%= yield %>
+    </div>
+      <hr>
 
-    <!--div id="sidebar" class="span2">
-      <h6>Menu</h6>
-      <p></p>
+      <footer>
+      <aside>
+        <a href="https://github.com/glenjarvis/"><%= image_tag("github.png") %></a> 
+        <a href="docs/jarvis_resume.pdf"><%= image_tag("resume.png") %></a> 
+        <a href="http://www.linkedin.com/in/glenjarvis"><%= image_tag("linkedin.png") %></a> 
+      </aside>
 
-      <ul class="nav nav-tabs nav-stacked nav-caret-left"-->
-        <%#= activatable_li_tag_with_link "Sub menu", nil %>
-        <%#= activatable_li_tag_with_link "Another menu", "#" %>
-      <!--/ul>
-    </div--> <!-- /#sidebar -->
-  </div> <!-- /.row -->
-<% end %>
+        <p>&copy; 2010-2013 Glen Jarvis, LLC. All Rights Reserved.</p>
+      </footer>
+
+    <script>
+    $(function() {
+        // setup ul.tabs to work as tabs for each div directly under div.panes
+        $("ul.tabs").tabs("div.panes > section",
+        {
+        effect: 'fade',
+        fadeOutSpeed: "slow",
+        });
+    });
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-5292622-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--script src="../assets/js/jquery.js"></script-->
+    <!--script src="../assets/js/bootstrap-transition.js"></script-->
+    <!--script src="../assets/js/bootstrap-alert.js"></script-->
+    <!--script src="../assets/js/bootstrap-modal.js"></script-->
+    <!--script src="../assets/js/bootstrap-dropdown.js"></script-->
+    <!--script src="../assets/js/bootstrap-scrollspy.js"></script-->
+    <!--script src="../assets/js/bootstrap-tab.js"></script-->
+    <!--script src="../assets/js/bootstrap-tooltip.js"></script-->
+    <!--script src="../assets/js/bootstrap-popover.js"></script-->
+    <!--script src="../assets/js/bootstrap-button.js"></script-->
+    <!--script src="../assets/js/bootstrap-collapse.js"></script-->
+    <!--script src="../assets/js/bootstrap-carousel.js"></script-->
+    <!--script src="../assets/js/bootstrap-typeahead.js"></script-->
+  </body>
+</html>

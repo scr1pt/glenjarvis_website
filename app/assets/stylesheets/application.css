@@ -11,3 +11,15 @@
  *= require_self
  *= require_tree .
  */
+
+aside {
+  text-align: center;
+  height: auto;
+  margin-bottom: 10px;
+  min-width: 500px;
+}
+
+aside a img{
+ vertical-align: middle;
+ position: relative;
+}
