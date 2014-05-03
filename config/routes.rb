@@ -1,5 +1,8 @@
-GlenjarvisCom::Application.routes.draw do
+GlenJarvisCom::Application.routes.draw do
+  get 'about' => 'static_pages#about'
+  get 'search_results' => 'static_pages#search_results'
 
+  root :to => 'static_pages#about'
   get 'recommendations' => 'recommendations#index'
   get 'recommendations/:id' => 'recommendations#show'
 
