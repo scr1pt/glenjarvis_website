@@ -35,6 +35,11 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 
+# Capistrano artifacts
+REVISION
+assets_manifest.json
+public/system
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal

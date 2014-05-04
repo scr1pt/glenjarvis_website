@@ -15,6 +15,8 @@ group :test do
   gem 'capybara', '2.1.0'
 end
 
+gem 'capistrano', '2.15.5'
+gem 'rvm-capistrano', '1.5.1'
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.0'
