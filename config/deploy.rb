@@ -1,5 +1,6 @@
 set :application, "GlenJarvis.com Website"
 set :repository,  "git@github.com:glenjarvis/glenjarvis-website.git"
+set :branch, fetch(:branch, "experiment/cap_deploy")
 set :scm, :git
 set :use_sudo, false
 set :deploy_to, "/var/apps"
