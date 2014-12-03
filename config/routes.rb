@@ -1,6 +1,7 @@
 GlenJarvisCom::Application.routes.draw do
-  get 'about' => 'static_pages#about'
+  resources :about, only: [:index]
   get 'search_results' => 'static_pages#search_results'
 
-  root :to => 'static_pages#about'
+
+  root :to => 'about#index'
 end
