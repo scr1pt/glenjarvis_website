@@ -1,4 +1,6 @@
 GlenJarvisCom::Application.routes.draw do
+  resources :templates
+
   resources :about, only: [:index]
   get "search/results"
 

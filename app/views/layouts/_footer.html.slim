@@ -1,9 +1,9 @@
-footer
+<footer>
   .container
     p.pull-right
       = link_to "Home", root_path
       | &middot;
-      = link_to "About", '/about'
+      = link_to "About", about_index_path
       | &middot;
       = link_to "Contact Us", "#"
       | &middot;
@@ -12,15 +12,14 @@ footer
       = link_to "Privacy", "#"
 
     p
-      | &copy; 2010-
+      ' &copy;
       => Date.today.year
-      => app_name
+      = app_name
       |. All rights reserved.
 
-    p.center
-      a href="https://github.com/glenjarvis/"
-        = image_tag("github.png")
-      a href="http://www.linkedin.com/in/glenjarvis">
-        = image_tag("linkedin.png")
-      // a href="docs/jarvis_resume.pdf"
-      // = image_tag("resume.png")
+    .row
+      p.center
+        a href="https://github.com/glenjarvis/"
+          = image_tag("github.png")
+        a href="http://www.linkedin.com/in/glenjarvis"
+          = image_tag("linkedin.png")

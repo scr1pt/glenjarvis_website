@@ -1,13 +1,13 @@
 // Links for current user.
 .navbar-text.pull-right
-  .nav-collapse.collapse
-    form#search_form.navbar-form.pull-right action=" #{ search_results_path }"
-      input.span3 name='q' type="search" placeholder="Search..."
-      //onchange="document.getElementById('search_form').submit();"
-      div
-        input type="hidden"name="cx" value="partner-pub-2648941248992936:vvaqvh-2jy7"
-        input type="hidden"name="cof" value="FORID:10"
-        <input type="hidden"name="ie" value="UTF-8"
 
-    script type="text/javascript"
-           src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"
+  a href="#"
+    = icon_tag "user"
+    ' Welcome,
+    strong
+    => "Guest"
+
+  / This to be re-enabled when settings are needed
+  / span.divider
+  / '|
+  / = link_to "Settings", "#"
