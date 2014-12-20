@@ -1,25 +1,26 @@
-// Top navigation bar containing the main menu
-
+/ Top navigation bar containing the main menu
 .navbar.navbar-fixed-top
-  // TIP: to unfix the navbar:
-  // 1. remove the 'navbar-fixed-top' class here and
-  // 2. add the 'static-navbar' class to the body tag.
+  /  TIP: to unfix the navbar:
+  /  1. remove the 'navbar-fixed-top' class here and
+  /  2. add the 'static-navbar' class to your body tag.
   .navbar-inner
     .container
-      // .btn-navbar is used as the toggle for collapsed navbar content
-      a.btn.btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
+
+      / .btn-navbar is used as the toggle for collapsed navbar content
+      a.btn.btn-navbar data-toggle="collapse" data-target=".nav-collapse"
         span.icon-bar
         span.icon-bar
         span.icon-bar
 
-      // <!-- Le logo -->
+      / Le logo
       a.brand href="#{ root_path }"
-        #{ app_name }
+        = app_name
 
-      // Everything you want hidden at 940px or less, place within here
+      / Everything hidden at 940px or less
       .nav-collapse
+        / = render "layouts/search_bar"
         ul.nav
-          = activatable_li_tag_with_link "Home", "#{ root_path }"
+          = activatable_li_tag_with_link "Home", root_path
           = activatable_li_tag_with_link "About", "#{ about_index_path }"
 
         = yield :navbar

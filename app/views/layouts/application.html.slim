@@ -3,25 +3,10 @@
 = render :layout => "layouts/base" do
   .page-header
     .row
-      .span7
-        h2
-          = @title
-        = yield :description
-
-      .span2
-        = yield :actions
-
-  <!-- /.page-header -->
+      / These left over from Gimlet auto-create. Remove if not necessary
+      = yield :description
+      = yield :actions
 
   .row
-    div#content.span10
+    div#content.span12
       = yield
-    </div> <!-- /#content -->
-
-    <!--div id="sidebar" class="span2">
-      <h6>Menu</h6>
-      <p></p>
-
-      <ul class="nav nav-tabs nav-stacked nav-caret-left"-->
-        //= activatable_li_tag_with_link "Sub menu", nil
-        //= activatable_li_tag_with_link "Another menu", "#"
