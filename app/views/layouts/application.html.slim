@@ -1,0 +1,27 @@
+- content_for :navbar, render("layouts/user_nav")
+
+= render :layout => "layouts/base" do
+  .page-header
+    .row
+      .span7
+        h2
+          = @title
+        = yield :description
+
+      .span2
+        = yield :actions
+
+  <!-- /.page-header -->
+
+  .row
+    div#content.span10
+      = yield
+    </div> <!-- /#content -->
+
+    <!--div id="sidebar" class="span2">
+      <h6>Menu</h6>
+      <p></p>
+
+      <ul class="nav nav-tabs nav-stacked nav-caret-left"-->
+        //= activatable_li_tag_with_link "Sub menu", nil
+        //= activatable_li_tag_with_link "Another menu", "#"
