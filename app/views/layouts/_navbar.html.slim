@@ -20,7 +20,8 @@
       .nav-collapse
         / = render "layouts/search_bar"
         ul.nav
-          = activatable_li_tag_with_link "Home", root_path
+          / = activatable_li_tag_with_link "Home", root_path
           = activatable_li_tag_with_link "About", "#{ about_index_path }"
+          = activatable_li_tag_with_link "Recommendations", "#{ recommendations_path }"
 
         = yield :navbar
