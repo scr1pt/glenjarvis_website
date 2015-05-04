@@ -16,7 +16,7 @@ group :test do
 end
 
 gem 'capistrano', '2.15.5'
-gem 'rvm-capistrano', '1.5.1'
+gem 'rvm-capistrano', '1.5.1', require: false
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.0'
@@ -36,5 +36,6 @@ group :production do
 end
 
 # For purchased Bootstrap Themes from Dressed.com
-source 'http://dresssed.com/gems/c2e9071e76fe9dd4d59a/'
-gem 'dresssed-gimlet'
+source 'http://dresssed.com/gems/c2e9071e76fe9dd4d59a/' do
+  gem 'dresssed-gimlet'
+end
