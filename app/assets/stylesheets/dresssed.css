@@ -7,13 +7,11 @@
  * To fully customize your theme, run: `rails generate dresssed:customize`.
  */
 
-/* Uncomment to change the logo and its size in the left corner of the top navbar.
 .navbar .brand {
-  background-image: url('logo.png');
-  width: 105px;
-  height: 24px;
+  background-image: none;
+  width: 1px;
+  height: 1px;
 }
-*/
 
 /* This is for a text logo. However, it disrupts the header size when responding smaller
 .navbar .brand {
