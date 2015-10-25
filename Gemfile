@@ -30,11 +30,12 @@ group :doc do
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '0.15.1'
   gem 'thin'
   gem 'rails_12factor', '0.0.2'
 end
 
 # For purchased Bootstrap Themes from Dressed.com
-source 'http://dresssed.com/gems/c2e9071e76fe9dd4d59a/'
-gem 'dresssed-gimlet'
+source 'http://dresssed.com/gems/c2e9071e76fe9dd4d59a/' do
+  gem 'dresssed-gimlet'
+end
