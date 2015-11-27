@@ -4,6 +4,7 @@ ruby '2.1.7'
 
 gem 'zip', '2.0.2'
 gem 'rails', '4.0.0'
+gem 'foundation-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'
