@@ -4,7 +4,6 @@ ruby '2.1.7'
 
 gem 'zip', '2.0.2'
 gem 'rails', '4.0.0'
-gem 'foundation-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.7'
@@ -22,6 +21,9 @@ gem "slim", "~> 3.0"
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.0'
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails', '2.2.1'
 gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
@@ -37,3 +39,14 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
+# Use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
+# Use unicorn as the app server
+# gem 'unicorn'
+
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
+
+# Use debugger
+# gem 'debugger', group: [:development, :test]
