@@ -36,7 +36,3 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-# For purchased Bootstrap Themes from Dressed.com
-source 'http://dresssed.com/gems/c2e9071e76fe9dd4d59a/' do
-  gem 'dresssed-gimlet'
-end
