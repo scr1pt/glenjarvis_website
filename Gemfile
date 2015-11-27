@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.1.7'
 #ruby-gemset glenjarvis-website
 
 gem 'zip', '2.0.2'
