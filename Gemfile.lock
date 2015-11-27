@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: http://dresssed.com/gems/c2e9071e76fe9dd4d59a/
   specs:
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
@@ -45,9 +44,6 @@ GEM
     coffee-script-source (1.7.0)
     daemons (1.2.3)
     diff-lcs (1.2.5)
-    dresssed-gimlet (1.4.1)
-      jquery-rails
-      rails (>= 3.1)
     erubis (2.7.0)
     eventmachine (1.0.8)
     execjs (2.2.1)
@@ -161,7 +157,6 @@ PLATFORMS
 DEPENDENCIES
   capybara (= 2.1.0)
   coffee-rails (= 4.0.0)
-  dresssed-gimlet!
   jbuilder (= 1.0.2)
   jquery-rails (= 2.2.1)
   pg (= 0.15.1)
