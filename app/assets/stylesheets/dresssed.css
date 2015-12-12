@@ -1,0 +1,14 @@
+.navbar .brand {
+  background-image: none;
+  width: 1px;
+  height: 1px;
+}
+
+/* This is for a text logo. However, it disrupts the header size when responding smaller
+.navbar .brand {
+  background-image: none;
+  text-indent: 0;
+  width: auto;
+  color: #f0f0f0;
+}
+*/
