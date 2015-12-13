@@ -2,21 +2,39 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
-    meta name="description" content="Courses and videos on how to use visualization. Courses cover Amazon Web Instances, using Ansible to deploy, Learning Python, etc."
-    meta name="keywords" content="Python, Ruby, Software Engineering, Online Classes"
-    meta name="author" content="Glen Jarvis"
-    meta name="copyright" content="Copyright Glen Jarvis, LLC 1994-2016. All Rights Reserved."
-    meta name="DC.title" content="Glen Jarvis LLC Online Training"
-    meta name="DC.subject" content="Education"
-  title
-    = @title || "GlenJarvis.com"
-  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-  = javascript_include_tag "application", "data-turbolinks-track" => true
-  = csrf_meta_tags
-body
-  header
-  = yield
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
 
+    title == content_for?(:title) ? yield(:title) : "Untitled"
+
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = csrf_meta_tag
+    <script>$(document).foundation();</script>
+
+  body
+
+    == yield
+
+//doctype html
+//html lang="en"
+//  head
+//    meta charset="utf-8"
+//    meta name="description" content="Courses and videos on how to use visualization. Courses cover Amazon Web Instances, using Ansible to deploy, Learning Python, etc."
+//    meta name="keywords" content="Python, Ruby, Software Engineering, Online Classes"
+//    meta name="author" content="Glen Jarvis"
+//    meta name="copyright" content="Copyright Glen Jarvis, LLC 1994-2016. All Rights Reserved."
+//    meta name="DC.title" content="Glen Jarvis LLC Online Training"
+//    meta name="DC.subject" content="Education"
+//  title
+//    = @title || "GlenJarvis.com"
+//  = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+//  = javascript_include_tag "application", "data-turbolinks-track" => true
+//  = csrf_meta_tags
+//body
+//  header
+//  = yield
+//
 //    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
 //    = yield :styles
 //    // = javascript_include_tag "vendor/modernizr"
