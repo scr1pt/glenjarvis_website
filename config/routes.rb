@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'codersclan/index'
+
   # get "about/index" <== auto generated
   resources :about, only: [:index]
   # get "recommendations/index" <== auto generated
