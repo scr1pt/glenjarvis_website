@@ -7,14 +7,14 @@ html lang="en"
     title == content_for?(:title) ? yield(:title) : "Untitled"
 
     = stylesheet_link_tag "application"
-    = javascript_include_tag "vendor/modernizr"
-    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    = javascript_include_tag :modernizr
     = csrf_meta_tag
-    <script>$(document).foundation();</script>
 
   body
 
     == yield
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
+    <script>$(function(){ $(document).foundation(); })</script>
 
 //doctype html
 //html lang="en"

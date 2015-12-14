@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.1.7'
+# ruby '2.1.7'
 #ruby-gemset glenjarvis-website
 
 gem 'zip', '2.0.2'
 gem 'rails', '4.2.5'
-gem 'foundation-rails'
+gem 'modernizr-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'
